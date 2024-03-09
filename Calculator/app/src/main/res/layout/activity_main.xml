@@ -52,7 +52,8 @@
 
 
 
-    <LinearLayout style="@style/buttonRow">
+    <LinearLayout style="@style/buttonRow"
+        >
 
         <Button style="@style/buttonNumber"
             android:text="7"
@@ -71,7 +72,6 @@
         </Button>
         <Button style="@style/buttonOperator"
             android:text="x"
-            android:background="@color/palered"
             android:textColor="@color/black"
             android:onClick="operatorAction">
 
@@ -81,40 +81,37 @@
 
         <Button style="@style/buttonNumber"
             android:text="4"
-            android:onClick="numberAction">
+            android:onClick="numberAction"/>
 
-        </Button>
+
         <Button style="@style/buttonNumber"
             android:text="5"
-            android:onClick="numberAction">
+            android:onClick="numberAction"/>
 
-        </Button>
+
         <Button style="@style/buttonNumber"
             android:text="6"
-            android:onClick="numberAction">
+            android:onClick="numberAction"/>
 
-        </Button>
         <Button style="@style/buttonOperator"
             android:text="-"
-            android:background="@color/palered"
             android:textColor="@color/black"
-            android:onClick="operatorAction">
+            android:onClick="operatorAction"/>
 
-        </Button>
+
     </LinearLayout>
 
     <LinearLayout style="@style/buttonRow">
 
         <Button style="@style/buttonNumber"
             android:text="1"
-            android:onClick="numberAction">
+            android:onClick="numberAction"/>
 
-        </Button>
+
         <Button style="@style/buttonNumber"
             android:text="2"
-            android:onClick="numberAction">
+            android:onClick="numberAction"/>
 
-        </Button>
         <Button style="@style/buttonNumber"
             android:text="3"
             android:onClick="numberAction"
@@ -123,38 +120,31 @@
         </Button>
         <Button style="@style/buttonOperator"
             android:text="+"
-            android:background="@color/palered"
             android:textColor="@color/black"
-            android:onClick="operatorAction">
+            android:onClick="operatorAction"/>
 
-        </Button>
     </LinearLayout>
 
     <LinearLayout style="@style/buttonRow">
 
         <Button style="@style/buttonNumber"
             android:text="0"
-            android:onClick="numberAction">
+            android:onClick="numberAction"/>
 
-        </Button>
         <Button style="@style/buttonNumber"
-            android:text=".">
+            android:text="."/>
 
-        </Button>
-
-        <Button style="@style/buttonOperator"
-            android:text="%"
-            android:onClick="operatorAction">
-
-        </Button>
+        <Button style="@style/buttonNumber"
+            android:text="⌫"
+            android:textColor="@color/del"
+            android:onClick="backSpaceAction"/>
 
         <Button style="@style/buttonOperator"
             android:text="/"
-            android:background="@color/palered"
+         
             android:textColor="@color/black"
-            android:onClick="operatorAction">
+            android:onClick="operatorAction"/>
 
-        </Button>
     </LinearLayout>
 
     <LinearLayout style="@style/buttonRow">
@@ -171,29 +161,28 @@
         <Button style="@style/buttonNumber"
             android:text="CLR"
             android:textColor="@color/del"
-            android:onClick="allClearAction">
+            android:onClick="allClearAction"/>
 
-        </Button>
-        <Button style="@style/buttonNumber"
-            android:text="⌫"
-            android:textColor="@color/del"
-            android:onClick="backSpaceAction">
 
-        </Button>
+        <Button style="@style/buttonOperator"
+            android:text="%"
+            android:textColor="@color/black"
+            android:onClick="operatorAction"/>
+
+    </LinearLayout>
+
+    <LinearLayout style="@style/buttonRow">
 
         <Button
             style="@style/buttonNumber"
-            android:layout_width="0dp"
-            android:layout_weight="2"
-            android:background="@color/aqua"
+            android:background="@color/palered"
             android:onClick="equalsAction"
             android:text="="
             android:textColor="@color/black"
-            android:textSize="40sp">
-
-        </Button>
+            android:textSize="40sp"/>
 
     </LinearLayout>
+
 
 
 </LinearLayout>

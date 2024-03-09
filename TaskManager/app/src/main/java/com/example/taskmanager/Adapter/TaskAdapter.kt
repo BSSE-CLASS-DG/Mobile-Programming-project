@@ -22,7 +22,7 @@ class TaskAdapter( private val activity: Activity,private var taskList: List<Tas
     // ViewHolder class holds references to the views in each list item
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val task: TextView = itemView.findViewById(R.id.checkDone)
-        val but : Button = itemView.findViewById(R.id.checkDoneButton)
+        val but : CheckBox = itemView.findViewById(R.id.checkDoneButton)
 
     }
 
@@ -39,8 +39,8 @@ class TaskAdapter( private val activity: Activity,private var taskList: List<Tas
         holder.task.text = " ${currentTask.getTask()}"
 
         if (currentTask.getStatus() == 1) {
-            holder.but.text = "Completed"
-            holder.but.setBackgroundColor(ContextCompat.getColor(activity, R.color.green))
+            holder.but.isChecked = true
+
         }
 
 

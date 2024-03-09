@@ -1,13 +1,12 @@
 package com.example.taskmanager.Model
 
 import java.io.Serializable
-import java.util.Date
 
-class TaskModel(private var id: Int, private var status: Int, private var task: String, private var startDate:String , private var endDate:String) :Serializable {
+class TaskModel(private var id: Long, private var status: Int, private var task: String, private var startDate:String, private var endDate:String) :Serializable {
     // Additional class members or functions can be added here
 
     // Getter methods are automatically generated in Kotlin
-    fun getId(): Int {
+    fun getId(): Long {
         return id
     }
 
@@ -27,7 +26,7 @@ class TaskModel(private var id: Int, private var status: Int, private var task: 
     }
 
     // Setter methods
-    fun setId(newId: Int) {
+    fun setId(newId: Long) {
         id = newId
     }
 
