@@ -148,26 +148,44 @@ class MainActivity : AppCompatActivity() {
         return newList
     }
 
-    private fun digitsOperators(): MutableList<Any>
-    {
+    private fun digitsOperators(): MutableList<Any> {
         val list = mutableListOf<Any>()
-        var currentDigit = ""
-        for(character in binding.workingsTV.text)
-        {
-            if(character.isDigit() || character == '.')
-                currentDigit += character
-            else
-            {
-                list.add(currentDigit.toFloat())
-                currentDigit = ""
+        var currentNumber = ""
+        for (character in binding.workingsTV.text) {
+            if (character.isDigit() || character == '.') {
+                currentNumber += character
+            } else if (character == '(' || character == ')') {
+                if (currentNumber.isNotEmpty()) {
+                    list.add(currentNumber.toFloat())
+                    currentNumber = ""
+                }
+                list.add(character)
+            } else {
+                if (currentNumber.isNotEmpty()) {
+                    list.add(currentNumber.toFloat())
+                    currentNumber = ""
+                }
                 list.add(character)
             }
         }
 
-        if(currentDigit != "")
-            list.add(currentDigit.toFloat())
+        if (currentNumber.isNotEmpty()) {
+            list.add(currentNumber.toFloat())
+        }
 
         return list
+    }
+
+    private fun bracketAction(view: View) {
+        if (view is Button) {
+            val bracket = view.text.toString()
+            binding.workingsTV.append(bracket)
+
+            // If an opening bracket is added, allow adding operators after it
+            if (bracket == "(") {
+                canAddOperator = true
+            }
+        }
     }
 
 
