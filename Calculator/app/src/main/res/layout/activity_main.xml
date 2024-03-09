@@ -50,31 +50,7 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <LinearLayout style="@style/buttonRow">
 
-        <Button style="@style/buttonNumber"
-            android:text="AC"
-            android:textColor="@color/red"
-            android:onClick="allClearAction">
-
-        </Button>
-        <Button style="@style/buttonNumber"
-            android:text="⌫"
-            android:textColor="@color/red"
-            android:onClick="backSpaceAction">
-
-        </Button>
-        <Button style="@style/buttonOperator"
-            android:text="%"
-            android:onClick="operatorAction">
-
-        </Button>
-        <Button style="@style/buttonOperator"
-            android:text="/"
-            android:onClick="operatorAction">
-
-        </Button>
-    </LinearLayout>
 
     <LinearLayout style="@style/buttonRow">
 
@@ -95,6 +71,8 @@
         </Button>
         <Button style="@style/buttonOperator"
             android:text="x"
+            android:background="@color/palered"
+            android:textColor="@color/black"
             android:onClick="operatorAction">
 
         </Button>
@@ -118,6 +96,8 @@
         </Button>
         <Button style="@style/buttonOperator"
             android:text="-"
+            android:background="@color/palered"
+            android:textColor="@color/black"
             android:onClick="operatorAction">
 
         </Button>
@@ -143,6 +123,8 @@
         </Button>
         <Button style="@style/buttonOperator"
             android:text="+"
+            android:background="@color/palered"
+            android:textColor="@color/black"
             android:onClick="operatorAction">
 
         </Button>
@@ -151,21 +133,63 @@
     <LinearLayout style="@style/buttonRow">
 
         <Button style="@style/buttonNumber"
-            android:text=".">
-
-        </Button>
-        <Button style="@style/buttonNumber"
             android:text="0"
             android:onClick="numberAction">
 
         </Button>
         <Button style="@style/buttonNumber"
-            android:text="="
-            android:layout_weight="2"
-            android:background="@color/orange"
-            android:textSize="40sp"
+            android:text=".">
+
+        </Button>
+
+        <Button style="@style/buttonOperator"
+            android:text="%"
+            android:onClick="operatorAction">
+
+        </Button>
+
+        <Button style="@style/buttonOperator"
+            android:text="/"
+            android:background="@color/palered"
             android:textColor="@color/black"
-            android:onClick="equalsAction">
+            android:onClick="operatorAction">
+
+        </Button>
+    </LinearLayout>
+
+    <LinearLayout style="@style/buttonRow">
+
+        <Button
+            style="@style/buttonNumber"
+            android:text="("
+            android:onClick="numberAction" />
+
+        <Button
+            style="@style/buttonNumber"
+            android:text=")"
+            android:onClick="numberAction" />
+        <Button style="@style/buttonNumber"
+            android:text="CLR"
+            android:textColor="@color/del"
+            android:onClick="allClearAction">
+
+        </Button>
+        <Button style="@style/buttonNumber"
+            android:text="⌫"
+            android:textColor="@color/del"
+            android:onClick="backSpaceAction">
+
+        </Button>
+
+        <Button
+            style="@style/buttonNumber"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:background="@color/aqua"
+            android:onClick="equalsAction"
+            android:text="="
+            android:textColor="@color/black"
+            android:textSize="40sp">
 
         </Button>
 
